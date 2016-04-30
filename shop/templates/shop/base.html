@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>{% block title %}Home{% endblock %}</title>
+    <link href="shop/templates/shop/styles.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+
+        h3{
+            background-color: #171a21;
+            color: #337ab7;
+            padding:7px;
+        }
+
+        .top-logo-h{
+            background-color:#171a21;
+            color: #337ab7;
+        }
+
+
+        body {
+            margin-left: 10%;
+            margin-right: 10%;
+            background-image: url("http://3.bp.blogspot.com/-v5Sxa2aW5ps/T7_836_fZOI/AAAAAAAABEk/5XhHzEAP9TQ/s1600/Awesome+car+wallpapers-6.jpg");
+            #background-repeat: repeat-y;
+            background-attachment: fixed
+
+        }
+
+        .form-signin{
+             margin-left:20%;
+             position: fixed;
+        }
+
+        .span3{
+            height: 200px;
+            overflow: scroll;
+        }
+
+        .table{
+            color:#337ab7;
+            #background-color: #171a21;
+        }
+        .description{
+            padding:10px;
+            background-color:#FFFFFF;
+            color: #171a21;
+        }
+
+        .text {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            background-color:#171a21;
+            color: #337ab7;
+            }
+        .mol {
+            #position: fixed;
+            margin-left: 7%;
+            #background-color:#171a21;
+            }
+        .navbar-fixed-top{
+             margin-right: 15%;
+             margin-left:25%;
+            #background-color: #FFFF00;
+        }
+        .navbar-default-new{
+        margin-left:10%;
+        margin-right: 30%;
+        margin-top:7.5%;
+       #background-color:#FFFFFF;
+        }
+        .left-no{
+            float:left;
+            width: 150px;
+        }
+        .contentt{
+            #margin-left : 30%;
+            margin-top :20%;
+        }
+        .center{
+           margin-left: 30%;
+        }
+        .logo{
+        background-color:#171a21;
+        margin-top: 25px;
+        color: #337ab7;
+        }
+        .log-in{
+        margin-top: 25px;
+        }
+        .navbar-left{
+        background-color:#171a21;
+        #margin-top: 17%;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="sidebar">
+{% block sidebar %}
+<div class="navbar navbar-fixed-top">
+    <div class="container btn-group" aria-label="...">
+
+            <button type="button" class="btn btn-lg top-logo-h btn-default"> <h1>Heisenberg</h1></button>
+            <div class="center">
+                <a class="btn logo btn-md btn-default" href="/" role="button">Home</a>
+                <a class="btn logo btn-md btn-default" href="/catalog" role="button">Catalog</a>
+                <a class="btn logo btn-md btn-default" href="/cart" role="button">Cart</a>
+                <a class="btn logo btn-md btn-default" href="/admin" role="button">Admin</a>
+            </div>
+        </div>
+</div>
+<div class="navbar-fixed-top navbar navbar-default-new ">
+    <div class="center">
+        <a class="btn log-in btn-sm btn-primary" href="/authorisation/" role="button">Sign in</a>
+        <a class="btn logo btn-sm btn-default" href="/" role="button">Most popular</a>
+        <a class="btn logo btn-sm btn-default" href="/" role="button">New models</a>
+        <a class="btn logo btn-sm btn-default" href="/" role="button">Rare</a>
+        <a class="btn logo btn-sm btn-default" href="/" role="button">News</a>
+        <a class="btn logo btn-sm btn-default" href="/" role="button">Popular</a>
+    </div>
+</div>
+    <div class="row">
+<div class="col-md-2 left-no contentt">
+        <a class="btn logo btn-md" href="/catalog/category/3" role="button">Alfa Romeo</a>
+        <a class="btn logo btn-md" href="/" role="button">Audi</a>
+        <a class="btn logo btn-md" href="/" role="button">Bentley</a>
+        <a class="btn logo btn-md" href="/" role="button">BMW</a>
+        <a class="btn logo btn-md" href="/" role="button">Bugatti</a>
+        <a class="btn logo btn-md" href="/" role="button">Cadillac</a>
+        <a class="btn logo btn-md" href="/" role="button">Chevrolet</a>
+        <a class="btn logo btn-md" href="/" role="button">De Lorean</a>
+        <a class="btn logo btn-md" href="/" role="button">Ferrari</a>
+        <a class="btn logo btn-md" href="/" role="button">Ford</a>
+</div>
+<div id="content">
+{% block content %}{% endblock %}
+<div class="container col-md-2 contentt">
+        <a class="btn logo btn-md" href="/" role="button">More info</a>
+        <a class="btn logo btn-md" href="/" role="button">Other countries</a>
+        <a class="btn logo btn-md" href="/" role="button">Contact us</a>
+        <a class="btn logo btn-md" href="/" role="button">About company</a>
+</div>
+    </div>
+{% endblock %}
+</div>
+
+</div>
+</body>
+</html>
+

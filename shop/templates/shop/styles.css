@@ -1,0 +1,18 @@
+body {
+    background: white url(http://www.htmldog.com/images/bg.gif) no-repeat top right;
+	}
+#navbar {
+    color: red;
+    font-weight: bold;
+    border-style: dashed;
+    border-width: 3px;
+    border-left-width: 10px;
+	border-right-width: 10px;
+	border-color: red;
+	}
+
+
+1
+	h2 {
+
+	}

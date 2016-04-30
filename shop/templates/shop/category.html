@@ -1,0 +1,30 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Category{% endblock %}
+
+{% block content %}
+  <div class="container col-md-8 contentt">
+     <table class="table">
+       <thead>
+        <tr>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Logo</th>
+        </tr>
+       </thead>
+    <tbody>
+        {% if products_list %}
+        {% for product in products_list %}
+        <tr>
+         <td><a href="/catalog/category/product/{{ product.id }}">{{ product.name }}</a></td>
+        <td>{{ product.description }}</td>
+        <td><img src="http://pngimg.com/upload/car_logo_PNG1639.png" height="50px" width="50px"></td>
+        </tr>
+    {% endfor %}
+    {% else %}
+    <p>No products in this category.</p>
+      {% endif %}
+       </tbody>
+     </table>
+  </div>
+{% endblock %}

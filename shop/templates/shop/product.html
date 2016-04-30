@@ -1,0 +1,33 @@
+{% extends "shop/base.html" %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+    <div class="container col-md-8 contentt">
+           <button class="btn btn-lg btn-primary btn-block" >Buy</button>
+            <img src="http://www.alfaromeocommunity.com/wp-content/uploads/2014/04/diva1.jpg" height="100%" width="100%">
+
+     <table class="table table-sec">
+       <thead>
+        <tr>
+            <th>Logo</th>
+            <th>Name</th>
+        </tr>
+       </thead>
+    <tbody>
+    <tr>
+        <td><img src="http://pngimg.com/upload/car_logo_PNG1639.png" height="100px" width="100px"></td>
+        <td><h3>{{ product.name }}</h3></td>
+        </tr>
+      </tbody>
+     </table>
+    <h3>Comments</h3>
+     <div class="description span3">
+     {% for comment in comments_list %}
+        <p>{{ comment.user }} : {{ comment.text }}</p>
+      {% endfor %}
+     </div>
+ <div class="btn log-in btn-sm btn-primary" href="/" role="button">Send</div>
+      </div>
+     </div>
+{% endblock %}
